@@ -318,6 +318,14 @@ export default class Graph extends React.Component {
         }
     };
 
+    zoomIn = () => {
+        d3Zoom().scaleBy(d3Select(`#${this.state.id}-${CONST.GRAPH_WRAPPER_ID}`), 1.5);
+    };
+
+    zoomOut = () => {
+        d3Zoom().scaleBy(d3Select(`#${this.state.id}-${CONST.GRAPH_WRAPPER_ID}`), 0.5);
+    };
+
     /**
      * Calls the callback passed to the component.
      * @param  {Object} e - The event of onClick handler.
